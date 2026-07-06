@@ -1,5 +1,7 @@
 # SHOP.md Open Standard
-**Version:** 0.1 (draft)
+**Version:** 0.1
+**Status:** Draft Proposal
+**Date:** 2026-07-07
 **License:** MIT
 **Home:** shopmd.org
 **Repository:** github.com/shop-md/shop.md
@@ -8,6 +10,10 @@
 
 - Kazim Ali — Devkind
 - Saad Bhutto — Devkind
+
+---
+
+> **This is a working draft.** Fields, section names, and behaviours described here may change before a stable release. Implementers are encouraged to track the repository and participate in shaping the spec. Feedback via GitHub Issues is the primary mechanism for contribution.
 
 ---
 
@@ -176,7 +182,7 @@ Full policies at /policies.md.
 
 The discovery pointer section. Lists every AI-readable file available for this store with a one-sentence description. An agent reads this section to know where to go next.
 
-Only list files that exist. No placeholders. No dead links.
+Only list files that exist. No placeholders. No dead links. Paths are domain-relative (e.g. `/catalog.md` resolves to `https://yourdomain.com/catalog.md` on the live store). Markdown link syntax is recommended for agent parsers that follow links, but plain text paths are acceptable.
 
 ```markdown
 ## Context Files
@@ -389,7 +395,17 @@ Files written to an older minor version remain valid under a newer minor version
 
 ## Contributing
 
-The spec is maintained at github.com/shop-md/shop.md. Issues, PRs, and discussion welcome. The goal is a standard useful to any commerce platform, not one tied to any single tool or implementation.
+This is a draft spec and active contributions are welcome. The goal is a standard useful to any commerce platform, not tied to any single tool or implementation.
+
+**How to contribute:**
+
+- **File an issue** for corrections, missing fields, ambiguous language, or use cases the spec does not cover: github.com/shop-md/shop.md/issues
+- **Open a PR** for new example implementations (one store per directory under `examples/`)
+- **Start a discussion** for larger changes (new sections, breaking field changes) before writing code or prose
+
+The maintainers review contributions within 7 days. Breaking changes to required fields require a major version bump and a discussion issue first. New optional fields can be proposed via PR with a real-world use case.
+
+See `CONTRIBUTING.md` for the full process.
 
 ---
 
