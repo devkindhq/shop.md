@@ -14,7 +14,12 @@ free_shipping_threshold:
   currency: AUD
 price_range: mid
 categories: ["pet food", "dog treats", "cat food", "pet accessories"]
+condition: [new]
+regulated_categories: []
+age_verification: false
 payment_methods: [visa, mastercard, paypal, afterpay, shop_pay]
+guest_checkout: true
+ucp_enabled: false
 agent_capabilities: [browse, cart, checkout, recommendations]
 b2b: false
 established: 2018

@@ -1,0 +1,11 @@
+# Fold Electronics
+
+Certified refurbished consumer electronics. Grade A, B, and C units. B2C and B2B.
+
+## Commerce
+
+- [SHOP.md](/shop.md): Store identity, logistics, and commerce context for AI agents.
+- [CATALOG.md](/catalog.md): Full inventory with grade, condition notes, specifications, and pricing for 1,800 or more units, queryable by category, grade, price, and stock.
+- [POLICIES.md](/policies.md): Complete warranty, return, B2B, and shipping policies.
+- [AGENTS.md](/AGENTS.md): Instructions for how AI agents should interact with this store, including permitted actions and checkout guidance.
+- [llms.txt](/llms.txt): Full index of all AI-readable files on this store.

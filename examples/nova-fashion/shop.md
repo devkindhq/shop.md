@@ -14,7 +14,12 @@ free_shipping_threshold:
   currency: USD
 price_range: premium
 categories: ["womenswear", "dresses", "knitwear", "outerwear", "accessories"]
+condition: [new]
+regulated_categories: []
+age_verification: false
 payment_methods: [visa, mastercard, amex, paypal, apple_pay, klarna]
+guest_checkout: true
+ucp_enabled: false
 agent_capabilities: [browse, cart, checkout, wishlist, recommendations]
 b2b: false
 established: 2019

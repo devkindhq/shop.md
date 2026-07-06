@@ -1,0 +1,15 @@
+# Nova
+
+Contemporary womenswear brand. Ships worldwide.
+
+## Commerce
+
+- [SHOP.md](/shop.md): Store identity, logistics, and commerce context for AI agents.
+- [CATALOG.md](/catalog.md): Full product catalogue with variants by size and colour, queryable by category, price, stock, and keyword.
+- [POLICIES.md](/policies.md): Complete return, shipping, and privacy policies.
+- [AGENTS.md](/AGENTS.md): Instructions for how AI agents should interact with this store, including permitted actions and checkout guidance.
+- [llms.txt](/llms.txt): Full index of all AI-readable files on this store.
+
+## Brand
+
+- [BRAND.md](/brand.md): Brand identity, voice, and writing rules for AI content generation.

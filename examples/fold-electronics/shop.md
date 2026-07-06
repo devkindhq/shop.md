@@ -14,7 +14,12 @@ free_shipping_threshold:
   currency: USD
 price_range: mid
 categories: ["laptops", "smartphones", "tablets", "monitors", "audio", "accessories"]
+condition: [refurbished]
+regulated_categories: []
+age_verification: false
 payment_methods: [visa, mastercard, amex, paypal, apple_pay, affirm]
+guest_checkout: true
+ucp_enabled: false
 agent_capabilities: [browse, cart, checkout, account]
 b2b: true
 established: 2016
