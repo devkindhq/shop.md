@@ -15,6 +15,7 @@ free_shipping_threshold:
 price_range: premium
 categories: ["womenswear", "dresses", "knitwear", "outerwear", "accessories"]
 payment_methods: [visa, mastercard, amex, paypal, apple_pay, klarna]
+agent_capabilities: [browse, cart, checkout, wishlist, recommendations]
 b2b: false
 established: 2019
 ---
@@ -52,5 +53,6 @@ Visa, Mastercard, Amex, PayPal, Apple Pay, and Klarna. Full policies at
 
 - `/catalog.md`: Full catalogue with 280 styles, sizing, variants, and stock availability.
 - `/policies.md`: Complete return, shipping, and sustainability policies.
-- `/brand.md`: Brand identity, voice, and visual guidelines.
+- `/brand.md`: Brand identity, voice, and personality guidelines.
+- `/AGENTS.md`: Instructions for how AI agents should interact with this store.
 - `/llms.txt`: Full index of all AI-readable files on this store.

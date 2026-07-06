@@ -87,9 +87,9 @@ PayPal, Afterpay, and Shop Pay. Full policies at /policies.md.
 
 ## Context Files
 
-- [CATALOG.md](/catalog.md): 340 SKUs with variants, pricing, and stock.
-- [POLICIES.md](/policies.md): Complete return and shipping policies.
-- [llms.txt](/llms.txt): Full index of AI-readable files on this store.
+- `/catalog.md`: 340 SKUs with variants, pricing, and stock.
+- `/policies.md`: Complete return and shipping policies.
+- `/llms.txt`: Full index of AI-readable files on this store.
 ```
 
 ## How to implement
@@ -117,7 +117,8 @@ python validator/validate.py path/to/shop.md
 | `shop.md` | Store context | Is this store right for this shopper? |
 | `catalog.md` | Product layer | What does this store sell? |
 | `policies.md` | Policy layer | What are the full terms? |
-| `brand.md` | Identity layer | What is this brand's voice and visual system? |
+| `brand.md` | Identity layer | What is this brand's voice, identity, and personality? |
+| `design.md` | UI execution layer | How is this store's interface built? |
 
 ## Standards alignment
 
@@ -130,6 +131,11 @@ W3C TDMRep, ARD v0.9 (ards-project/ard-spec), RFC 8288, RFC 9309.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Open an issue before submitting
 changes to the spec.
+
+## Contributors
+
+<a href="https://github.com/rome2o"><img src="https://github.com/rome2o.png" width="50" height="50" alt="Kazim Ali" title="Kazim Ali" /></a>
+<a href="https://github.com/saad-bhutto"><img src="https://github.com/saad-bhutto.png" width="50" height="50" alt="Saad Bhutto" title="Saad Bhutto" /></a>
 
 ## License
 

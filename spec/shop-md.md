@@ -35,7 +35,7 @@ A shopper's agent arriving at an unfamiliar store has to infer: does this store 
 
 SHOP.md closes that gap with a single file at a predictable URL.
 
-The format follows the same instinct as `llms.txt` (discovery index), `AGENTS.md` (coding agent brief), and `BRAND.md` (brand identity context): when you want to brief an AI, you hand it a markdown document. SHOP.md is that document for commerce.
+The format follows the same instinct as `llms.txt` (discovery index), `AGENTS.md` (coding agent brief), and `brand.md` (brand identity context, see github.com/caiopizzol/brand.md): when you want to brief an AI, you hand it a markdown document. SHOP.md is that document for commerce.
 
 **It is the summary layer, not the full layer.** SHOP.md qualifies the store and points to deeper files. It never duplicates what POLICIES.md, CATALOG.md, or BRAND.md contain. An agent that needs the full return policy reads POLICIES.md. An agent that needs products reads CATALOG.md. SHOP.md tells the agent what exists and where to find it.
 
@@ -43,13 +43,23 @@ The format follows the same instinct as `llms.txt` (discovery index), `AGENTS.md
 
 ---
 
+## Relationship to UCP
+
+The Universal Commerce Protocol (UCP) is the transaction layer for AI commerce -- it lets agents search, cart, and check out across UCP-enabled stores. SHOP.md is the context layer -- it tells an agent what a store is and whether it is right for a given shopper, before any transaction begins.
+
+They compose naturally. An agent reads SHOP.md to qualify the store, then uses UCP to transact. SHOP.md does not duplicate UCP capabilities. It fills the gap UCP deliberately leaves: store identity, logistics policy, trust signals, and specialisation -- the brief that makes a recommendation possible.
+
+Implementing both is not required. SHOP.md is useful without UCP. UCP operates without SHOP.md. A store that has both gives agents a complete picture: context and capability in one visit.
+
+---
+
 ## File Format
 
 ### Location
 
-Served at `{domain}/shop.md`. For Shopify stores, served via App Proxy at `{myshopify-domain}/apps/shopmd/shop.md` and mirrored at the custom domain by the ShopMD application.
+Served at `{domain}/shop.md`. Place `shop.md` at the web root so it is publicly accessible at `https://yourdomain.com/shop.md`. Platform-specific generation is covered in the Generating SHOP.md section.
 
-For non-Shopify implementations: place `shop.md` at the web root and ensure it is publicly accessible.
+The canonical path is lowercase. Implementations should serve the file case-insensitively so that both `/shop.md` and `/SHOP.md` resolve to the same response.
 
 ### Structure
 
@@ -82,7 +92,13 @@ free_shipping_threshold:
 # Store profile
 price_range: mid                     # budget | mid | premium | luxury
 categories: ["pet food", "dog treats", "cat accessories"]
+condition: [new]                     # new | refurbished | secondhand | open_box
+regulated_categories: []             # alcohol | tobacco | cannabis | medications | weapons | adult_content
+age_verification: false              # boolean, true if store enforces age gates at checkout
 payment_methods: [visa, mastercard, paypal, afterpay, shop_pay]
+guest_checkout: true                 # boolean, true if purchase is possible without an account
+ucp_enabled: false                   # boolean, true if store supports UCP agentic checkout
+agent_capabilities: [browse, cart]   # what agents are permitted to do on behalf of shoppers
 b2b: false                           # boolean, true if wholesale/B2B available
 established: 2018                    # year as integer
 ---
@@ -103,14 +119,20 @@ established: 2018                    # year as integer
 |---|---|---|
 | `language` | BCP 47 (RFC 5646) | Primary language. Use tags like `en`, `en-AU`, `zh-Hant`. |
 | `currencies` | array | Accepted currencies. First is default. |
-| `ships_to` | array or "worldwide" | Countries shipped to |
+| `ships_to` | array or "worldwide" | Countries shipped to. Country-level only in v0.1. Sub-national region and postal-code granularity is a known limitation planned for a future version. |
 | `ships_from` | ISO 3166-1 | Country orders are dispatched from |
 | `return_window_days` | integer or null | Days buyer has to return. Null if no returns accepted. |
 | `free_returns` | boolean | Whether return shipping is covered by the store |
 | `free_shipping_threshold` | object | `amount` and `currency`. Null if no free shipping threshold. |
 | `price_range` | enum | `budget`, `mid`, `premium`, or `luxury`. Merchant self-selects. No enforced thresholds in v1. |
 | `categories` | array | Product category strings. Plain English is valid. For precision, use Google Product Taxonomy names (open standard, Apache 2.0 tooling). |
+| `condition` | array | Inventory conditions stocked. Enum: `new`, `refurbished`, `secondhand`, `open_box`. Omit if the store stocks only new products. |
+| `regulated_categories` | array | Categories of regulated or age-restricted inventory. Enum: `alcohol`, `tobacco`, `cannabis`, `medications`, `weapons`, `adult_content`. Omit or use empty array if none apply. Agents use this to pre-qualify before browsing the catalogue. |
+| `age_verification` | boolean | Whether the store enforces age gates at checkout. Paired with `regulated_categories`. |
 | `payment_methods` | array | Accepted payment methods. No open standard registry exists for payment identifiers. SHOP.md defines a controlled vocabulary: `visa`, `mastercard`, `amex`, `discover`, `unionpay`, `jcb`, `paypal`, `apple_pay`, `google_pay`, `shop_pay`, `afterpay`, `klarna`, `affirm`, `zip`. Use informal tickers for crypto (e.g. `btc`, `eth`) with documentation. |
+| `guest_checkout` | boolean | Whether purchase is possible without creating an account. Critical for agentic checkout flows that cannot create accounts on behalf of buyers. |
+| `ucp_enabled` | boolean | Whether the store supports UCP agentic checkout. Agents use this to determine whether a delegated checkout flow is available before attempting a transaction. |
+| `agent_capabilities` | array | Actions agents are permitted to perform on behalf of shoppers. Enum: `browse` (search and filter catalog), `cart` (add items to cart), `checkout` (initiate and complete purchase), `account` (access order history and saved addresses), `wishlist` (save items for later), `recommendations` (request personalised product suggestions). Full instructions live in `/AGENTS.md`. |
 | `b2b` | boolean | Whether wholesale or B2B purchasing is available |
 | `established` | integer | Year the store was founded |
 
@@ -324,13 +346,14 @@ SHOP.md is the entry point. It qualifies and orients. Other files go deep.
 | File | Layer | What it answers |
 |---|---|---|
 | `llms.txt` | Discovery index | What AI-readable files exist on this domain |
-| `shop.md` | Store context | Is this store right for this shopper? |
-| `catalog.md` | Product layer | What does this store sell, exactly? |
-| `policies.md` | Policy layer | What are the full terms? |
-| `brand.md` | Identity layer | What is this brand's voice, identity, and personality? |
-| `design.md` | UI execution layer | How is this store's interface built? (see github.com/google-labs-code/design.md) |
+| SHOP.md | Store context | Is this store right for this shopper? |
+| CATALOG.md | Product layer | What does this store sell, exactly? |
+| POLICIES.md | Policy layer | What are the full terms? |
+| AGENTS.md | Agent instructions | What are agents permitted to do, and how should they behave? |
+| BRAND.md | Identity layer | What is this brand's voice, identity, and personality? |
+| DESIGN.md | UI execution layer | How is this store's interface built? (see github.com/google-labs-code/design.md) |
 
-An agent following the shopper's journey reads in this order: `shop.md` to qualify, `catalog.md` to browse, `policies.md` to confirm terms before recommending purchase.
+An agent following the shopper's journey reads in this order: SHOP.md to qualify, CATALOG.md to browse, POLICIES.md to confirm terms before recommending purchase.
 
 ---
 
@@ -429,6 +452,7 @@ Standards and specifications this document aligns to or normatively references.
 | llms.txt | Discovery index standard for AI-readable files. SHOP.md should be listed under `## Commerce`. | llmstxt.org |
 | AGENTS.md | Open format for briefing AI coding agents. Stewarded by the Linux Foundation. | agents.md |
 | design.md | Open standard for design tokens and component context in markdown. Defines the `design.md` companion file format. | github.com/google-labs-code/design.md |
+| brand.md | Open standard for brand identity files. Defines the `brand.md` companion file format for AI tools. | github.com/caiopizzol/brand.md |
 
 ---
 

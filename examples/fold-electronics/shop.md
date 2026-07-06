@@ -15,6 +15,7 @@ free_shipping_threshold:
 price_range: mid
 categories: ["laptops", "smartphones", "tablets", "monitors", "audio", "accessories"]
 payment_methods: [visa, mastercard, amex, paypal, apple_pay, affirm]
+agent_capabilities: [browse, cart, checkout, account]
 b2b: true
 established: 2016
 ---
@@ -56,4 +57,5 @@ buyers. Full policies at /policies.md.
 
 - `/catalog.md`: Full inventory with grade, condition notes, specs, and pricing for 1,800+ units.
 - `/policies.md`: Complete warranty, return, B2B, and shipping policies.
+- `/AGENTS.md`: Instructions for how AI agents should interact with this store.
 - `/llms.txt`: Full index of all AI-readable files on this store.

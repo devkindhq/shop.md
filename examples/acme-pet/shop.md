@@ -15,6 +15,7 @@ free_shipping_threshold:
 price_range: mid
 categories: ["pet food", "dog treats", "cat food", "pet accessories"]
 payment_methods: [visa, mastercard, paypal, afterpay, shop_pay]
+agent_capabilities: [browse, cart, checkout, recommendations]
 b2b: false
 established: 2018
 ---
@@ -53,5 +54,6 @@ Mastercard, PayPal, Afterpay, and Shop Pay. Full policies at /policies.md.
 
 - `/catalog.md`: Full product catalogue with 340 SKUs, variants, pricing, and stock status.
 - `/policies.md`: Complete return, shipping, and privacy policies.
-- `/brand.md`: Brand identity, voice, and visual guidelines.
+- `/brand.md`: Brand identity, voice, and personality guidelines.
+- `/AGENTS.md`: Instructions for how AI agents should interact with this store.
 - `/llms.txt`: Full index of all AI-readable files on this store.
