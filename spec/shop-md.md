@@ -187,13 +187,11 @@ Only list files that exist. No placeholders. No dead links. Paths are domain-rel
 ```markdown
 ## Context Files
 
-- [CATALOG.md](/catalog.md): Full product catalogue — 340 SKUs with 
-  variants, pricing, stock status, and enriched descriptions.
-- [POLICIES.md](/policies.md): Complete return, shipping, and privacy 
-  policies.
-- [BRAND.md](/brand.md): Brand identity, voice, and visual guidelines.
-- [DESIGN.md](/design.md): Theme token map and component inventory.
-- [llms.txt](/llms.txt): Full index of all AI-readable files on this store.
+- `/catalog.md`: Full product catalogue -- 340 SKUs with variants, pricing, stock status, and enriched descriptions.
+- `/policies.md`: Complete return, shipping, and privacy policies.
+- `/brand.md`: Brand identity, voice, and personality guidelines.
+- `/design.md`: Design tokens, theme, and component inventory. See github.com/google-labs-code/design.md for the open standard.
+- `/llms.txt`: Full index of all AI-readable files on this store.
 ```
 
 ---
@@ -329,8 +327,8 @@ SHOP.md is the entry point. It qualifies and orients. Other files go deep.
 | `shop.md` | Store context | Is this store right for this shopper? |
 | `catalog.md` | Product layer | What does this store sell, exactly? |
 | `policies.md` | Policy layer | What are the full terms? |
-| `brand.md` | Identity layer | What is this brand's voice and visual system? |
-| `design.md` | UI execution layer | How is this store's interface built? |
+| `brand.md` | Identity layer | What is this brand's voice, identity, and personality? |
+| `design.md` | UI execution layer | How is this store's interface built? (see github.com/google-labs-code/design.md) |
 
 An agent following the shopper's journey reads in this order: `shop.md` to qualify, `catalog.md` to browse, `policies.md` to confirm terms before recommending purchase.
 
@@ -354,7 +352,7 @@ Acme Pet Supply stocks grain-free and raw-diet pet food for dogs and cats.
 
 ## Context Files
 
-- [CATALOG.md](/catalog.md): Full product catalogue.
+- `/catalog.md`: Full product catalogue.
 ```
 
 A minimum file is better than no file. Start here, expand over time.
@@ -406,6 +404,31 @@ This is a draft spec and active contributions are welcome. The goal is a standar
 The maintainers review contributions within 7 days. Breaking changes to required fields require a major version bump and a discussion issue first. New optional fields can be proposed via PR with a real-world use case.
 
 See `CONTRIBUTING.md` for the full process.
+
+---
+
+## References
+
+Standards and specifications this document aligns to or normatively references.
+
+| Reference | Description | URL |
+|---|---|---|
+| ARD v0.9 | Agentic Resource Discovery spec. Defines `/.well-known/ai-catalog.json`, `specVersion`, `entries`, and URN identifier format. | github.com/ards-project/ard-spec |
+| IETF aipref | `Content-Usage` header vocabulary for AI training and search signals (`train-ai`, `search`). | datatracker.ietf.org/wg/aipref |
+| RFC 7763 | Registers `text/markdown` as an IANA media type. | datatracker.ietf.org/doc/rfc7763 |
+| RFC 8288 | Web Linking. Defines `Link` response header and `rel` attribute semantics. | datatracker.ietf.org/doc/rfc8288 |
+| RFC 9309 | Robots Exclusion Protocol. Governs `User-agent` and `Allow`/`Disallow` directives in `robots.txt`. | datatracker.ietf.org/doc/rfc9309 |
+| BCP 47 (RFC 5646) | Language tag standard. Used for the `language` field. | datatracker.ietf.org/doc/rfc5646 |
+| ISO 3166-1 alpha-2 | Two-letter country codes. Used for `ships_to` and `ships_from`. | iso.org/iso-3166-country-codes |
+| ISO 4217 | Three-letter currency codes. Used for `currencies`. | iso.org/iso-4217-currency-codes |
+| Schema.org OnlineStore | Structured data type for online stores. SHOP.md fields map to its properties. | schema.org/OnlineStore |
+| Schema.org MerchantReturnPolicy | Structured data type for return policies. | schema.org/MerchantReturnPolicy |
+| W3C TDMRep | Text and Data Mining Reservation. Defines `tdm-reservation` header for EU DSM Directive alignment. | w3c.github.io/tdm-reservation-protocol |
+| Google Product Taxonomy | Open taxonomy for product categories. Apache 2.0 licensed tooling. | support.google.com/merchants/answer/6324436 |
+| Universal Commerce Protocol (UCP) | Transaction layer for AI commerce. Complements SHOP.md's context layer. | ucp.dev — github.com/Universal-Commerce-Protocol/ucp |
+| llms.txt | Discovery index standard for AI-readable files. SHOP.md should be listed under `## Commerce`. | llmstxt.org |
+| AGENTS.md | Open format for briefing AI coding agents. Stewarded by the Linux Foundation. | agents.md |
+| design.md | Open standard for design tokens and component context in markdown. Defines the `design.md` companion file format. | github.com/google-labs-code/design.md |
 
 ---
 
