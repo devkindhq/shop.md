@@ -133,4 +133,4 @@ changes to the spec.
 
 ## License
 
-MIT. Created by [Devkind](https://devkind.com.au). Standard home: [shopmd.org](https://shopmd.org).
+MIT. Authors: Kazim Ali and Saad Bhutto at [Devkind](https://devkind.com.au). Standard home: [shopmd.org](https://shopmd.org).
