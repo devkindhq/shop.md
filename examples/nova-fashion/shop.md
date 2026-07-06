@@ -50,9 +50,7 @@ Visa, Mastercard, Amex, PayPal, Apple Pay, and Klarna. Full policies at
 
 ## Context Files
 
-- [CATALOG.md](/catalog.md): Full catalogue with 280 styles, sizing,
-  variants, and stock availability.
-- [POLICIES.md](/policies.md): Complete return, shipping, and
-  sustainability policies.
-- [BRAND.md](/brand.md): Brand identity, voice, and visual guidelines.
-- [llms.txt](/llms.txt): Full index of all AI-readable files on this store.
+- `/catalog.md`: Full catalogue with 280 styles, sizing, variants, and stock availability.
+- `/policies.md`: Complete return, shipping, and sustainability policies.
+- `/brand.md`: Brand identity, voice, and visual guidelines.
+- `/llms.txt`: Full index of all AI-readable files on this store.

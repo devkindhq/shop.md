@@ -51,9 +51,7 @@ Mastercard, PayPal, Afterpay, and Shop Pay. Full policies at /policies.md.
 
 ## Context Files
 
-- [CATALOG.md](/catalog.md): Full product catalogue with 340 SKUs,
-  variants, pricing, and stock status.
-- [POLICIES.md](/policies.md): Complete return, shipping, and privacy
-  policies.
-- [BRAND.md](/brand.md): Brand identity, voice, and visual guidelines.
-- [llms.txt](/llms.txt): Full index of all AI-readable files on this store.
+- `/catalog.md`: Full product catalogue with 340 SKUs, variants, pricing, and stock status.
+- `/policies.md`: Complete return, shipping, and privacy policies.
+- `/brand.md`: Brand identity, voice, and visual guidelines.
+- `/llms.txt`: Full index of all AI-readable files on this store.

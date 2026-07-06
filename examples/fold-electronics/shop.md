@@ -54,8 +54,6 @@ buyers. Full policies at /policies.md.
 
 ## Context Files
 
-- [CATALOG.md](/catalog.md): Full inventory with grade, condition notes,
-  specs, and pricing for 1,800 and more units.
-- [POLICIES.md](/policies.md): Complete warranty, return, B2B, and
-  shipping policies.
-- [llms.txt](/llms.txt): Full index of all AI-readable files on this store.
+- `/catalog.md`: Full inventory with grade, condition notes, specs, and pricing for 1,800+ units.
+- `/policies.md`: Complete warranty, return, B2B, and shipping policies.
+- `/llms.txt`: Full index of all AI-readable files on this store.
