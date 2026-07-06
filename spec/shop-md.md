@@ -4,6 +4,11 @@
 **Home:** shopmd.org
 **Repository:** github.com/shop-md/shop.md
 
+**Authors:**
+
+- Kazim Ali — Devkind
+- Saad Bhutto — Devkind
+
 ---
 
 ## What is SHOP.md?
@@ -388,4 +393,4 @@ The spec is maintained at github.com/shop-md/shop.md. Issues, PRs, and discussio
 
 ---
 
-*SHOP.md is an open standard. MIT licensed. Created by Devkind (devkind.com.au). Standard home: shopmd.org. Reference implementation for Shopify: shopmd.ai.*
+*SHOP.md is an open standard. MIT licensed. Authors: Kazim Ali and Saad Bhutto at Devkind (devkind.com.au). Standard home: shopmd.org. Reference implementation for Shopify: shopmd.ai.*
