@@ -1,0 +1,26 @@
+# SHOP.md
+
+> An open standard for AI-readable store context. A structured markdown file at /shop.md gives any AI agent the context it needs to qualify, evaluate, and recommend a commerce store.
+
+## Spec
+
+- [SHOP.md](https://shopmd.org/spec/shop-md/): Store context layer, full field reference
+- [CATALOG.md](https://shopmd.org/spec/catalog-md/): Queryable product catalogue endpoint standard
+- [POLICIES.md](https://shopmd.org/spec/policies-md/): Store policy standard (shipping, returns, warranty)
+- [BRAND.md](https://shopmd.org/spec/brand-md/): Brand identity and voice standard (concept by Caio Pizzol, thebrand.md)
+
+## Getting started
+
+- [Getting Started](https://shopmd.org/getting-started/): Minimum viable implementation, headers, robots.txt
+- [Contributing](https://shopmd.org/contributing/): Change process and versioning policy
+
+## Examples
+
+- [Acme Pet Supply](https://shopmd.org/examples/acme-pet/)
+- [Nova Fashion](https://shopmd.org/examples/nova-fashion/)
+- [Fold Electronics](https://shopmd.org/examples/fold-electronics/)
+
+## Optional
+
+- [Changelog](https://shopmd.org/project/changelog/)
+- [GitHub](https://github.com/shop-md/shop.md)
