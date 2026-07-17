@@ -7,11 +7,28 @@ export default defineConfig({
     starlight({
       title: 'SHOP.md',
       description: 'The open standard for AI-readable commerce.',
+      lastUpdated: true,
+      head: [
+        {
+          tag: 'script',
+          attrs: { type: 'application/ld+json' },
+          content: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'SHOP.md',
+            url: 'https://shopmd.org',
+            sameAs: ['https://github.com/shop-md/shop.md'],
+          }),
+        },
+      ],
       social: [
         { icon: 'github', label: 'GitHub', href: 'https://github.com/shop-md/shop.md' },
       ],
       editLink: {
         baseUrl: 'https://github.com/shop-md/shop.md/edit/main/',
+      },
+      components: {
+        Head: './src/components/Head.astro',
       },
       sidebar: [
         {
@@ -48,6 +65,7 @@ export default defineConfig({
           label: 'Project',
           items: [
             { label: 'Contributing', link: '/contributing/' },
+            { label: 'Maintainers', link: '/project/maintainers/' },
             { label: 'Changelog', link: '/project/changelog/' },
           ],
         },

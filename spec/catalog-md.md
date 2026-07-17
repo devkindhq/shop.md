@@ -20,7 +20,7 @@
 
 `CATALOG.md` is an endpoint standard for AI-readable product catalogues. A server at `{domain}/catalog.md` returns structured markdown containing product data, filtered by query parameters the agent supplies.
 
-It is the product layer in the AI commerce context stack. SHOP.md qualifies the store. CATALOG.md answers what that store sells.
+It is the product layer in the AI commerce context stack. [SHOP.md](/spec/shop-md/) qualifies the store. CATALOG.md answers what that store sells.
 
 `CATALOG.md` is not a file format. It is a contract between a store's server and any agent that arrives with a shopping intent. The agent asks a question -- "show me grain-free dog food under $30 that is in stock" -- and the endpoint returns only the matching products, in markdown prose, ready to quote and recommend.
 

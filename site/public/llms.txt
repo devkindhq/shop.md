@@ -9,6 +9,10 @@
 - [POLICIES.md](https://shopmd.org/spec/policies-md/): Store policy standard (shipping, returns, warranty)
 - [BRAND.md](https://shopmd.org/spec/brand-md/): Brand identity and voice standard (concept by Caio Pizzol, thebrand.md)
 
+## Validation
+
+- [Validation](https://shopmd.org/implement/validate/): Hosted validator API and CLI for checking SHOP.md/CATALOG.md/POLICIES.md/BRAND.md files against the spec
+
 ## Getting started
 
 - [Getting Started](https://shopmd.org/getting-started/): Minimum viable implementation, headers, robots.txt

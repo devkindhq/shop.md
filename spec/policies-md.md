@@ -21,7 +21,7 @@
 
 POLICIES.md is the policy layer in the AI commerce context stack. It is a structured markdown file that lives at `{domain}/policies.md` and gives AI agents the complete policy terms for a store -- returns, shipping, and privacy -- in a single readable file.
 
-Agents read POLICIES.md when a shopper needs policy confirmation before purchase: the exact return window, whether international shipping is available and at what cost, how personal data is handled. SHOP.md's Commerce section gives the agent enough to qualify a store. POLICIES.md gives the agent enough to confirm terms and make a purchase recommendation with full policy confidence.
+Agents read POLICIES.md when a shopper needs policy confirmation before purchase: the exact return window, whether international shipping is available and at what cost, how personal data is handled. [SHOP.md](/spec/shop-md/)'s Commerce section gives the agent enough to qualify a store. POLICIES.md gives the agent enough to confirm terms and make a purchase recommendation with full policy confidence.
 
 POLICIES.md is pointed to by SHOP.md's Commerce section and listed in Context Files. It replaces the need for an agent to locate, parse, and reconcile a store's individual policy pages -- which are written for human readers, structured for SEO, and inconsistently formatted across stores and platforms.
 

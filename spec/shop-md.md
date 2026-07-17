@@ -36,7 +36,7 @@ SHOP.md closes that gap with a single file at a predictable URL.
 
 The format follows the same instinct as `llms.txt` (discovery index), `AGENTS.md` (coding agent brief), and `brand.md` (brand identity context, see github.com/caiopizzol/brand.md): when you want to brief an AI, you hand it a markdown document. SHOP.md is that document for commerce.
 
-**It is the summary layer, not the full layer.** SHOP.md qualifies the store and points to deeper files. It never duplicates what POLICIES.md, CATALOG.md, or BRAND.md contain. An agent that needs the full return policy reads POLICIES.md. An agent that needs products reads CATALOG.md. SHOP.md tells the agent what exists and where to find it.
+**It is the summary layer, not the full layer.** SHOP.md qualifies the store and points to deeper files. It never duplicates what [POLICIES.md](/spec/policies-md/), [CATALOG.md](/spec/catalog-md/), or [BRAND.md](/spec/brand-md/) contain. An agent that needs the full return policy reads POLICIES.md. An agent that needs products reads CATALOG.md. SHOP.md tells the agent what exists and where to find it.
 
 **Structured for AI. Readable for humans.** The YAML frontmatter answers filter questions in one parse. The prose sections carry the intent and nuance that make the difference between a generic match and the right recommendation.
 

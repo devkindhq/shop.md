@@ -31,3 +31,5 @@ SHOP.md uses semantic versioning in the `version` frontmatter field.
 - **Patch:** clarifications to existing definitions
 
 Files written to an older minor version remain valid under a newer minor version.
+
+Authors: Kazim Ali and Saad Bhutto at [Devkind](https://devkind.com.au).
