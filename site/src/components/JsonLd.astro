@@ -1,0 +1,17 @@
+---
+const { entry } = Astro.props;
+const schema = entry?.data?.schema;
+let jsonLd = null;
+if (schema) {
+  jsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': schema.type,
+    headline: entry.data.title,
+    description: entry.data.description,
+    datePublished: schema.datePublished,
+    dateModified: schema.dateModified,
+    author: schema.authors.map((name) => ({ '@type': 'Person', name })),
+  });
+}
+---
+{jsonLd && <script type="application/ld+json" set:html={jsonLd} />}

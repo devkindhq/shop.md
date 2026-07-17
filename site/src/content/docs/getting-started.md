@@ -114,3 +114,5 @@ Add SHOP.md to your `/.well-known/ai-catalog.json` for discovery by agents that 
 ## Examples
 
 See the [examples](/examples/acme-pet/) for complete implementations across three store verticals.
+
+Authors: Kazim Ali and Saad Bhutto at [Devkind](https://devkind.com.au).

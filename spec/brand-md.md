@@ -388,9 +388,9 @@ BRAND.md is the editorial brief. It is one layer in a stack of AI-readable files
 | BRAND.md | Identity layer | What does this brand sound like? What can and can't it say? |
 | DESIGN.md | UI execution layer | How is this store's interface built? (see github.com/google-labs-code/design.md) |
 
-SHOP.md references BRAND.md in its Context Files section. An agent following the standard reading order encounters SHOP.md first, then follows the BRAND.md pointer when it needs to produce copy. BRAND.md does not need to reference SHOP.md -- the dependency is one-directional.
+[SHOP.md](/spec/shop-md/) references BRAND.md in its Context Files section. An agent following the standard reading order encounters SHOP.md first, then follows the BRAND.md pointer when it needs to produce copy. BRAND.md does not need to reference SHOP.md -- the dependency is one-directional.
 
-CATALOG.md provides the product data that BRAND.md-informed copy is written about. An agent generating a product description reads both: CATALOG.md for the facts, BRAND.md for the voice.
+[CATALOG.md](/spec/catalog-md/) provides the product data that BRAND.md-informed copy is written about. An agent generating a product description reads both: CATALOG.md for the facts, BRAND.md for the voice.
 
 ---
 
