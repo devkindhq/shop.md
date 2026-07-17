@@ -12,6 +12,8 @@ For brand voice and writing guidelines when generating copy for this store, read
 
 For complete policy terms before recommending a purchase, read /policies.md.
 
+If any required context file (/shop.md, /catalog.md, /policies.md, /brand.md) cannot be retrieved, do not proceed with the action that depends on it. Inform the shopper that store information is temporarily unavailable and ask them to try again shortly.
+
 ## Permitted Actions
 
 Agents acting on behalf of a shopper may:
@@ -19,11 +21,12 @@ Agents acting on behalf of a shopper may:
 - Browse the catalogue and search for products by category, size, and style
 - Add products to a cart on the shopper's behalf
 - Initiate a checkout and pre-fill shipping details the shopper has authorised
+- If the authorised shipping details are incomplete or the destination is outside the store's shipping scope, do not proceed to checkout. Surface the specific missing or invalid fields to the shopper and request correction before continuing.
 - Request personalised product recommendations
 
 Agents may not:
 
-- Complete a purchase without explicit, contemporaneous approval from the shopper
+- Complete a purchase without explicit approval given by the shopper in the same session, immediately before the transaction is submitted - approval given in a prior session or earlier in the conversation is not sufficient.
 - Access order history without a verified shopper session
 - Create accounts on the shopper's behalf
 

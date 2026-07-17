@@ -1,0 +1,85 @@
+---
+title: SHOP.md
+description: An open standard for AI-readable store context. A structured markdown file at /shop.md gives any AI agent the context it needs to qualify, evaluate, and recommend a commerce store.
+template: splash
+hero:
+  tagline: An open standard for AI-readable store context.
+  actions:
+    - text: Read the spec
+      link: /spec/shop-md/
+      icon: right-arrow
+      variant: primary
+    - text: Getting started
+      link: /getting-started/
+      icon: right-arrow
+    - text: View on GitHub
+      link: https://github.com/shop-md/shop.md
+      icon: external
+      variant: minimal
+---
+
+import { LinkCard } from '@astrojs/starlight/components';
+
+## What is SHOP.md?
+
+SHOP.md is an open standard for AI-readable commerce. A structured markdown file served at `{domain}/shop.md` gives any AI agent the context it needs to qualify, evaluate, and recommend a commerce store -- before browsing the product catalogue.
+
+The format combines YAML frontmatter (machine-parseable facts: shipping regions, return window, payment methods, price range) with prose sections (natural-language context an agent uses for nuanced recommendations). Any store on any platform can implement it by serving a correctly formatted markdown file at a predictable URL. No app required. No registration required.
+
+Version 0.1 is a working draft. MIT licensed.
+
+## The file stack
+
+SHOP.md is the entry point to a layered context stack. It qualifies the store and points to deeper files.
+
+| File | Layer | What it answers |
+|---|---|---|
+| `shop.md` | Store context | Is this store right for this shopper? |
+| `catalog.md` | Product layer | What does this store sell, exactly? |
+| `policies.md` | Policy layer | What are the full terms? |
+| `brand.md` | Identity layer | What is this store's voice and editorial style? |
+
+An agent following a shopper's journey reads in this order: `shop.md` to qualify the store, `catalog.md` to browse, `policies.md` to confirm terms before recommending purchase.
+
+<LinkCard
+  title="Have you got your brand.md done?"
+  description="The identity layer of the stack builds on brand.md, the open standard for brand identity files created by Caio Pizzol. Check it out."
+  href="https://thebrand.md"
+/>
+
+Also on [GitHub](https://github.com/caiopizzol/brand.md).
+
+## Who should implement
+
+**Commerce stores and platform developers** implement SHOP.md by serving the files at the appropriate URLs. Start with [Getting Started](/getting-started/) for the minimum viable implementation, required headers, and `robots.txt` configuration. See [examples](/examples/acme-pet/) for complete reference implementations across three store verticals.
+
+**Agent builders** reading SHOP.md into a shopping agent should read the [SHOP.md spec](/spec/shop-md/) for the full field reference and prose section definitions. The format is designed for a single HTTP GET -- no authentication, no session state, no pagination.
+
+**Contributors** shaping the standard should read [Contributing](/contributing/) for the change process, versioning policy, and commit conventions. The spec is a working draft. New optional fields, additional file types, and corrections to existing definitions are all in scope.
+
+## Relationship to other standards
+
+SHOP.md is the context layer. It does not replace or duplicate existing standards -- it composes with them.
+
+| Standard | Relationship |
+|---|---|
+| [UCP](https://ucp.dev) | Transaction layer. UCP lets agents search, cart, and check out. SHOP.md qualifies the store before any transaction begins. |
+| [llms.txt](https://llmstxt.org) | Discovery index. SHOP.md should be listed in `llms.txt` under a `## Commerce` section. |
+| [ARD](https://github.com/ards-project/ard-spec) | Agent resource discovery. SHOP.md registers as a `text/markdown` entry in `/.well-known/ai-catalog.json`. |
+| [AGENTS.md](https://agents.md) | Agent instruction file. SHOP.md points to it from the `## Context Files` section. |
+
+## How to contribute
+
+SHOP.md is a working draft. The goal is a standard useful to any commerce platform, not tied to any single tool or implementation.
+
+- **File an issue** for corrections, missing fields, or ambiguous language: [github.com/shop-md/shop.md/issues](https://github.com/shop-md/shop.md/issues)
+- **Start a discussion** before proposing breaking changes or new file types
+- **Open a PR** with a real-world use case for new optional fields or example implementations
+
+See [Contributing](/contributing/) for the full process.
+
+## License
+
+MIT. The standard is free to implement, fork, and extend.
+
+Authors: Kazim Ali and Saad Bhutto at [Devkind](https://devkind.com.au).

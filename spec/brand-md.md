@@ -1,12 +1,14 @@
 # BRAND.md Open Standard
-**Version:** 0.1
-**Status:** Draft Proposal
+
+> **Original concept by [Caio Pizzol](https://thebrand.md)** ([GitHub](https://github.com/caiopizzol/brand.md)). This page adapts his brand.md standard for the SHOP.md context stack.
+
+**Status:** Adapted for the SHOP.md context stack
 **Date:** 2026-07-07
 **License:** MIT
 **Home:** shopmd.org
 **Repository:** github.com/shop-md/shop.md
 
-**Authors:**
+**Adapted for SHOP.md by:**
 
 - Kazim Ali — Devkind
 - Saad Bhutto — Devkind
@@ -448,4 +450,4 @@ See `CONTRIBUTING.md` for the full process.
 
 ---
 
-*BRAND.md is an open standard. MIT licensed. Authors: Kazim Ali and Saad Bhutto at Devkind (devkind.com.au). Standard home: shopmd.org. Reference implementation for Shopify: shopmd.ai.*
+*BRAND.md is an open standard originally proposed by Caio Pizzol ([thebrand.md](https://thebrand.md), [GitHub](https://github.com/caiopizzol/brand.md)). MIT licensed. Adapted for the SHOP.md context stack by Kazim Ali and Saad Bhutto at Devkind (devkind.com.au). Standard home: shopmd.org. Reference implementation for Shopify: shopmd.ai.*

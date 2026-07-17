@@ -1,1 +1,14 @@
 research/
+
+# Starlight generated content (copied from spec/ at build time)
+site/src/content/docs/spec/
+site/src/content/docs/examples/
+
+# Build output and dependencies
+site/dist/
+site/node_modules/
+site/.astro/
+
+# Wrangler local dev state and secrets
+site/.wrangler/
+site/.dev.vars

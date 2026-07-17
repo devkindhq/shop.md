@@ -1,0 +1,10 @@
+{
+  "name": "shopmd-validator",
+  "account_id": "2f24c44ef9f8b3b233d90cc7d419e7c6",
+  "main": "worker.js",
+  "compatibility_date": "2025-01-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // Routes — set a custom domain once validator.shopmd.org is available
+  // "routes": [{ "pattern": "validator.shopmd.org/*", "zone_name": "shopmd.org" }]
+}

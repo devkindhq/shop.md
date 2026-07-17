@@ -1,0 +1,13 @@
+{
+  "name": "shopmd-site",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/copy-specs.mjs && astro dev",
+    "build": "node scripts/copy-specs.mjs && astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0",
+    "astro": "^7"
+  }
+}

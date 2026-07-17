@@ -1,15 +1,14 @@
 # SHOP.md Open Standard
-**Version:** 0.1
-**Status:** Draft Proposal
-**Date:** 2026-07-07
-**License:** MIT
-**Home:** shopmd.org
-**Repository:** github.com/shop-md/shop.md
 
-**Authors:**
-
-- Kazim Ali — Devkind
-- Saad Bhutto — Devkind
+| | |
+|---|---|
+| **Version** | 0.1 |
+| **Status** | Draft Proposal |
+| **Date** | 2026-07-07 |
+| **License** | MIT |
+| **Home** | shopmd.org |
+| **Repository** | github.com/shop-md/shop.md |
+| **Authors** | Kazim Ali, Saad Bhutto (Devkind) |
 
 ---
 
