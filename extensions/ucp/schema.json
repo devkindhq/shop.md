@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://shopmd.org/ucp/schemas/shopping/context.json",
+  "name": "org.shopmd.shopping.context",
+  "version": "2026-08-16",
+  "title": "SHOP.md Store Context",
+  "description": "Advertises that this Business publishes a SHOP.md store brief at {origin}/shop.md — machine-filterable qualification facts (ships_to, return_window_days, price_range, regulated_categories, guest_checkout) plus prose context, per the SHOP.md open standard (shopmd.org). Informational only: adds no fields to transactional payloads, and document contents are merchant-authored claims, not verified commitments.",
+  "requires": {
+    "protocol": { "min": "2026-01-23" }
+  },
+  "$defs": {
+    "capability_config": {
+      "type": "object",
+      "title": "Context Capability Config",
+      "description": "Configuration for the org.shopmd.shopping.context capability as advertised in a Business profile.",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Soft switch. When false, consumers MUST treat the capability as not active (do not fetch /shop.md on this basis)."
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
