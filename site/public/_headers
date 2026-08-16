@@ -13,3 +13,9 @@
 # Short cache for pagefind search index (regenerated each deploy)
 /pagefind/*
   Cache-Control: public, max-age=3600
+
+# UCP capability schema — served with explicit content-type and long cache
+# (bumped via $id version on breaking changes)
+/ucp/schemas/*
+  Content-Type: application/schema+json
+  Cache-Control: public, max-age=86400
