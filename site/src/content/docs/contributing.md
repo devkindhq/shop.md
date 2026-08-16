@@ -7,7 +7,7 @@ SHOP.md is a draft spec and active contributions are welcome. The goal is a stan
 
 ## How to contribute
 
-- **File an issue** for corrections, missing fields, ambiguous language, or use cases the spec does not cover: [github.com/shop-md/shop.md/issues](https://github.com/shop-md/shop.md/issues)
+- **File an issue** for corrections, missing fields, ambiguous language, or use cases the spec does not cover: [github.com/devkindhq/shop.md/issues](https://github.com/devkindhq/shop.md/issues)
 - **Open a PR** for new example implementations (one store per directory under `examples/`)
 - **Start a discussion** for larger changes -- new sections, breaking field changes -- before writing code or prose
 

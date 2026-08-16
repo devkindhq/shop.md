@@ -4,7 +4,7 @@
 **Date:** 2026-07-07
 **License:** MIT
 **Home:** shopmd.org
-**Repository:** github.com/shop-md/shop.md
+**Repository:** github.com/devkindhq/shop.md
 
 **Authors:**
 
@@ -500,7 +500,7 @@ This is a draft spec and active contributions are welcome. The goal is a standar
 
 **How to contribute:**
 
-- **File an issue** for corrections, missing section requirements, ambiguous language, or use cases the spec does not cover: github.com/shop-md/shop.md/issues
+- **File an issue** for corrections, missing section requirements, ambiguous language, or use cases the spec does not cover: github.com/devkindhq/shop.md/issues
 - **Open a PR** for new example implementations (one store per directory under `examples/`)
 - **Start a discussion** for larger changes (new required sections, breaking changes to frontmatter) before writing code or prose
 

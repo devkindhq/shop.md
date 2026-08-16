@@ -21,5 +21,5 @@ The following people are responsible for reviewing contributions and maintaining
 
 ## Contact
 
-Open an issue at [github.com/shop-md/shop.md](https://github.com/shop-md/shop.md) for spec feedback.
+Open an issue at [github.com/devkindhq/shop.md](https://github.com/devkindhq/shop.md) for spec feedback.
 For private matters, reach the maintainers via [devkind.com.au](https://devkind.com.au).

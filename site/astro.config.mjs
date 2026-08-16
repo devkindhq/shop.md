@@ -17,15 +17,15 @@ export default defineConfig({
             '@type': 'Organization',
             name: 'SHOP.md',
             url: 'https://shopmd.org',
-            sameAs: ['https://github.com/shop-md/shop.md'],
+            sameAs: ['https://github.com/devkindhq/shop.md'],
           }),
         },
       ],
       social: [
-        { icon: 'github', label: 'GitHub', href: 'https://github.com/shop-md/shop.md' },
+        { icon: 'github', label: 'GitHub', href: 'https://github.com/devkindhq/shop.md' },
       ],
       editLink: {
-        baseUrl: 'https://github.com/shop-md/shop.md/edit/main/',
+        baseUrl: 'https://github.com/devkindhq/shop.md/edit/main/',
       },
       components: {
         Head: './src/components/Head.astro',

@@ -7,7 +7,7 @@
 | **Date** | 2026-07-07 |
 | **License** | MIT |
 | **Home** | shopmd.org |
-| **Repository** | github.com/shop-md/shop.md |
+| **Repository** | github.com/devkindhq/shop.md |
 | **Authors** | Kazim Ali, Saad Bhutto (Devkind) |
 
 ---
@@ -309,7 +309,7 @@ This is a draft spec and active contributions are welcome. The goal is a standar
 
 **How to contribute:**
 
-- **File an issue** for corrections, missing parameters, ambiguous language, or use cases the spec does not cover: github.com/shop-md/shop.md/issues
+- **File an issue** for corrections, missing parameters, ambiguous language, or use cases the spec does not cover: github.com/devkindhq/shop.md/issues
 - **Open a PR** for new example implementations
 - **Start a discussion** for larger changes (new endpoints, breaking parameter changes) before writing code or prose
 
@@ -323,7 +323,7 @@ See `CONTRIBUTING.md` for the full process.
 
 | Reference | Description | URL |
 |---|---|---|
-| SHOP.md | Store context standard. catalog.md is its product layer companion. | github.com/shop-md/shop.md |
+| SHOP.md | Store context standard. catalog.md is its product layer companion. | github.com/devkindhq/shop.md |
 | ARD v0.9 | Agentic Resource Discovery spec. Defines `/.well-known/ai-catalog.json` discovery format. | github.com/ards-project/ard-spec |
 | IETF aipref | `Content-Usage` header vocabulary for AI training and search signals. | datatracker.ietf.org/wg/aipref |
 | RFC 7763 | Registers `text/markdown` as an IANA media type. | datatracker.ietf.org/doc/rfc7763 |

@@ -27,4 +27,4 @@
 ## Optional
 
 - [Changelog](https://shopmd.org/project/changelog/)
-- [GitHub](https://github.com/shop-md/shop.md)
+- [GitHub](https://github.com/devkindhq/shop.md)

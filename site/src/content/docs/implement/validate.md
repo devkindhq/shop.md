@@ -92,6 +92,6 @@ Exit code `0` = valid (warnings acceptable). Exit code `1` = invalid.
 
 ## Source
 
-The Worker source is at [`validator/worker.js`](https://github.com/shop-md/shop.md/blob/main/validator/worker.js) in the repository. It has no npm dependencies -- the YAML parser is implemented inline and runs natively in the Cloudflare Workers runtime.
+The Worker source is at [`validator/worker.js`](https://github.com/devkindhq/shop.md/blob/main/validator/worker.js) in the repository. It has no npm dependencies -- the YAML parser is implemented inline and runs natively in the Cloudflare Workers runtime.
 
 Authors: Kazim Ali and Saad Bhutto at [Devkind](https://devkind.com.au).
